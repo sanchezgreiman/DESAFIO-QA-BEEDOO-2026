@@ -91,7 +91,7 @@ Durante a execução dos testes foram identificados diversos problemas relaciona
 
 Os bugs identificados foram documentados no arquivo:
 
-📄 **bug_report.txt**
+📄 https://drive.google.com/file/d/1E4Ens5f1HrVqvHWvQ1jG7PmgyBIx6M3a/view?usp=drive_link
 
 ---
 
