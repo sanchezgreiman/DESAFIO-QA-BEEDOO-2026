@@ -1,0 +1,171 @@
+                                                    Bug Report
+
+Bug 01
+
+|Titulo
+Sistema permite criar curso com campos obrigatórios vazios
+
+|Passos para reproduzir:
+  -Acessar a página de cadastro de cursos.
+  -Deixar todos os campos do formulário vazios.
+  -Clicar no botão "Cadastrar Curso".
+
+|Resultado Esperado
+  -O sistema deve impedir o cadastro e exibir mensagem informando que os campos obrigatórios precisam ser
+  preenchidos.
+
+|Resultado Atual
+  -O sistema permite cadastrar o curso mesmo com todos os campos vazios.
+
+|Severidade
+  -Alta – permite registro de dados inválidos no sistema.
+  
+
+Bug 02
+
+|Título
+  -Funcionalidade de exclusão de curso não remove o curso da lista
+
+|Passos para reproduzir
+  -Criar um curso válido.
+  -Localizar o curso na lista.
+  -Clicar no botão "Excluir Curso".
+
+|Resultado Esperado
+  -O curso deve ser removido da lista após a exclusão.
+
+|Resultado Atual
+  -O sistema exibe mensagem informando que o curso foi excluído com sucesso, porém o curso continua aparecendo na
+  lista mesmo após atualizar a página.
+
+|Severidade
+  -Alta – funcionalidade principal do sistema não funciona corretamente.
+  
+
+Bug 03
+
+|Título
+  -Sistema permite cadastrar curso com data de término anterior à data de início
+  
+|Passos para reproduzir
+  -Acessar o formulário de cadastro de cursos.
+  -Inserir uma data de início posterior à data de término.
+  -Preencher os demais campos com dados válidos.
+  -Clicar em "Cadastrar Curso".
+
+|Resultado Esperado
+  -O sistema deve exibir mensagem de validação informando que a data de término não pode ser anterior à data de
+  início.
+
+|Resultado Atual
+  -O sistema permite cadastrar o curso com datas inválidas.
+
+|Severidade
+  -Média – pode causar inconsistência nos dados do sistema.
+  
+
+Bug 04
+
+|Título
+  -Sistema aceita URL inválida no campo de imagem de capa
+
+|Passos para reproduzir
+  -Acessar o formulário de cadastro de cursos.
+  -Inserir um texto inválido no campo "URL da imagem de capa" (exemplo: teste123).
+  -Preencher os demais campos com dados válidos.
+  -Clicar em "Cadastrar Curso".
+
+|Resultado Esperado
+  -O sistema deve validar o formato da URL e exibir mensagem de erro caso seja inválida.
+
+|Resultado Atual
+  -O sistema permite cadastrar o curso mesmo com uma URL inválida.
+
+|Severidade
+  -Baixa a Média – pode gerar imagens quebradas na interface.
+  
+
+Bug 05
+
+|Título
+  -Campo "Número de vagas" permite valores negativos ou zero
+
+|Passos para reproduzir
+  -Acessar o formulário de cadastro de cursos.
+  -Inserir valores inválidos no campo "Número de vagas", como -1 ou 0.
+  -Preencher os demais campos corretamente.
+  -Clicar em "Cadastrar Curso".
+
+|Resultado Esperado
+  -O sistema deve impedir a inserção de valores negativos ou zero e exibir mensagem de validação.
+
+|Resultado Atual
+  -O sistema permite cadastrar cursos com valores inválidos para o número de vagas.
+
+|Severidade
+  -Média – compromete a integridade dos dados.
+  
+
+Bug 06
+
+|Título
+  -Layout da interface quebra ao inserir número extremamente alto de vagas
+
+|Passos para reproduzir
+  -Acessar o formulário de cadastro de cursos.
+  -Inserir no campo "Número de vagas" um número extremamente alto (exemplo: 9999999999).
+  -Clicar em "Cadastrar Curso".
+  -Visualizar o curso na lista.
+
+|Resultado Esperado
+  -O sistema deve limitar o valor máximo permitido ou formatar corretamente a exibição do número na interface.
+
+|Resultado Atual
+  -O sistema permite cadastrar o curso e o número exibido ultrapassa os limites do cartão, causando overflow visual
+  e quebrando o layout da interface.
+
+|Severidade
+  -Alta – afeta a usabilidade e o layout da interface.
+  
+
+Bug 07
+
+|Título
+  -Texto extremamente longo quebra o layout do cartão do curso
+
+|Passos para reproduzir
+  -Acessar o formulário de cadastro de cursos.
+  -Inserir um texto muito longo (500+ caracteres) nos campos Nome do curso ou Descrição.
+  -Clicar em "Cadastrar Curso".
+  -Visualizar o curso na lista.
+
+|Resultado Esperado
+  -O sistema deve limitar o número de caracteres ou truncar o texto para manter o layout da interface.
+
+|Resultado Atual
+  -O sistema permite inserir textos muito longos e o cartão do curso se expande verticalmente de forma excessiva,
+  prejudicando a visualização da lista.
+
+|Severidade
+  -Alta – impacto na experiência do usuário e na organização da interface.
+
+
+Bug 08
+
+|Título
+  -Erro de ortografia no título da página
+
+|Passos para reproduzir
+  -Acessar a página principal da aplicação.
+  -Observar o título exibido no topo da página.
+
+|Resultado Esperado
+  -O título deve estar escrito corretamente como:
+  "DESAFIO QA BEEDOO 2026 CHALLENGE"
+
+|Resultado Atual
+  -O título aparece como:
+  "DESAFIO QA BEEDOO 2026 CHALENGE", faltando uma letra L na palavra Challenge.
+
+|Severidade
+  -Baixa – erro visual/ortográfico na interface.
